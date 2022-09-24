@@ -1,25 +1,41 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import authRouter from '@/modules/auth/router'
+import clienteRouter from '@/modules/cliente/router'
+import isAuthenticatedGuard from '@/modules/auth/router/auth-guard'
+import isNotAuthenticatedGuard from '@/modules/auth/router/not-auth-guard'
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "home",
+    component: () => import(/* webpackChunkName: "home" */ '../views/HomeView.vue')
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '',
+    name: 'no-home',
+    component: () => import(/* webpackChunkName: "home" */ '../views/HomeView.vue')
+  },
+  {
+    path: '/auth',
+    beforeEnter: [isNotAuthenticatedGuard],
+    ...authRouter
+  },
+  {
+    path: '/cliente',
+    beforeEnter: [isAuthenticatedGuard],
+    ...clienteRouter
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'error-404',
+    component: () => import('../modules/shared/pages/NoPageFound.vue')
   }
-]
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes
+  routes,
+  linkActiveClass: "active",
 })
 
 export default router
