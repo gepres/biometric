@@ -1,11 +1,13 @@
 import authModule from '@/modules/auth/store/auth'
 import ventasModule from '@/modules/cliente/store/ventas'
+import breakPointModule from '@/modules/shared/store/breakpoint'
 import { createStore } from "vuex";
 
 const store = createStore({
   modules: {
     auth: authModule,
-    ventas: ventasModule
+    ventas: ventasModule,
+    breakpoint:breakPointModule
   },
   state: {
   },

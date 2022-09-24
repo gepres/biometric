@@ -10,7 +10,7 @@ export default {
     {
       path: 'login',
       name: 'login2',
-      component: () => import(/* webpackChunkName: "login view" */ '@/modules/auth/views/LoginView.vue')
+      component: () => import(/* webpackChunkName: "login2 view" */ '@/modules/auth/views/LoginView.vue')
     },
   ]
 }
