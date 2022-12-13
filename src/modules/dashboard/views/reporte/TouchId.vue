@@ -1,11 +1,8 @@
 <template>
-  <h1>compras</h1>
+  <h1>TouchID</h1>
 </template>
 
 <script>
-export default {
-
-}
 </script>
 
 <style>

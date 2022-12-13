@@ -1,5 +1,5 @@
 <template>
-  <h1>productos</h1>
+  <h1>FaceAuth</h1>
 </template>
 
 <script>

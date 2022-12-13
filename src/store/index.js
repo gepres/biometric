@@ -1,5 +1,5 @@
 import authModule from '@/modules/auth/store/auth'
-import ventasModule from '@/modules/cliente/store/ventas'
+import ventasModule from '@/modules/dashboard/store/ventas'
 import breakPointModule from '@/modules/shared/store/breakpoint'
 import { createStore } from "vuex";
 

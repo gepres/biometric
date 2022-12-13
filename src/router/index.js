@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import authRouter from '@/modules/auth/router'
-import clienteRouter from '@/modules/cliente/router'
+import dashboardRouter from '@/modules/dashboard/router'
 import isAuthenticatedGuard from '@/modules/auth/router/auth-guard'
 import isNotAuthenticatedGuard from '@/modules/auth/router/not-auth-guard'
 
@@ -21,9 +21,9 @@ const routes = [
     ...authRouter
   },
   {
-    path: '/cliente',
+    path: '/dashboard',
     beforeEnter: [isAuthenticatedGuard],
-    ...clienteRouter
+    ...dashboardRouter
   },
   {
     path: '/:pathMatch(.*)*',

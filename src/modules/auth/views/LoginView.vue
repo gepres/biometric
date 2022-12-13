@@ -79,7 +79,7 @@
         }
         const {ok, message} = await this.signInUser(datos)
         if(!ok) alert(message)
-        else this.$router.push({name: 'cliente-ventas'})
+        // else this.$router.push({name: 'cliente-ventas'})
         this.loadingLogin = false
         }
     },
