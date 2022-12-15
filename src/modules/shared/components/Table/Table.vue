@@ -1,16 +1,24 @@
 <template>
-  <div class="content-table">
+  <div class="content-table" id="crollStyle">
     <table class="styled-table">
         <thead>
             <tr>
                 <th v-for="header of headers" :key="header.value">
                     <slot :name="'header-'+ header.value" v-bind="header">
-                        <header-text v-if="header.visible" :data="header" v-model="headersFilters[header.value]" @search="btnSearch"  />
+                        <header-text v-if="header.visibleFilter" :data="header" v-model="headersFilters[header.value]" @search="btnSearch"  />
+                        <span v-else class="text-blue_default text-capitalize text-subtitle-1 font-weight-bold text-center d-block">{{header.text}}</span>
                     </slot>
                 </th>
             </tr>
         </thead>
         <tbody>
+            <tr v-if="items.length === 0">
+                <td :colspan="headers.length" class="text-center">
+                    <span class="textNoData">
+                        {{noDataText}}
+                    </span>
+                </td>
+            </tr>
             <tr v-for="(item, i) of items" :key="i">
                 <td v-for="(val ,key, index) in item" :key="index">
                     <slot :name="'body-'+ key" v-bind="item">
@@ -21,15 +29,18 @@
         </tbody>
     </table>
   </div>
+  <Pagination v-model="page" :length="lengthPage" />
 </template>
 <script>
-import {  defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import HeaderText from './HeaderText/HeaderText.vue';
+import Pagination from './Pagination/Pagination.vue';
 
 export default defineComponent({
   name: 'Table',
   components: {
-    HeaderText
+    HeaderText,
+    Pagination
   },
   props: {
     headers: {
@@ -43,24 +54,35 @@ export default defineComponent({
     headersFilters: {
         type: Object,
         default: () => {}
+    },
+    noDataText: {
+        type: String,
+        default: 'No hay elementos'
     }
   },
   emits: ['search'],
   setup(props, {emit}) {
     const {headers, headersFilters} = props
+    const page = ref(1)
+    const lengthPage = ref(10)
     const btnSearch = () => {
         emit('search')
      }
     return{
         headers,
         headersFilters,
-        btnSearch
+        btnSearch,
+        page,
+        lengthPage
     }
   }
 });
 </script>
 
 <style lang="scss" scoped>
+.textNoData{
+    color:#757575;
+}
 .content-table{
     overflow:scroll;
      width:auto;
@@ -97,5 +119,35 @@ export default defineComponent({
 .styled-table tbody tr.active-row {
     font-weight: bold;
     color: rgb(var(--v-theme-blue_default));;
+}
+#crollStyle::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+#crollStyle::-webkit-scrollbar-thumb {
+    background: rgba(var(--v-theme-blue_default),0.7);
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+#crollStyle::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--v-theme-blue_default));
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+#crollStyle::-webkit-scrollbar-thumb:active {
+    background-color: rgb(var(--v-theme-blue_default));
+}
+#crollStyle::-webkit-scrollbar-track {
+    background: rgba(var(--v-theme-blue_default),0.4);
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+#crollStyle::-webkit-scrollbar-track:hover,
+#crollStyle::-webkit-scrollbar-track:active {
+  background: rgba(var(--v-theme-blue_default),0.4);
 }
 </style>

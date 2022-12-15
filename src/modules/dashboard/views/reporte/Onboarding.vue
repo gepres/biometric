@@ -9,6 +9,8 @@
           icon="mdi-camera"
           size="x-small"
           variant="flat"
+          title="Ver imagenes"
+          @click="openModal('camara',id)"
         ></v-btn>
         <v-btn
           color="blue_default"
@@ -16,6 +18,8 @@
           size="x-small"
           variant="flat"
           class="ml-1"
+          title="Ver info"
+          @click="openModal('info',id)"
         ></v-btn>
         <v-btn
           color="blue_default"
@@ -23,6 +27,8 @@
           size="x-small"
           variant="flat"
           class="ml-1"
+          title="Eventos"
+          @click="openModal('event',id)"
         ></v-btn>
         <v-btn
           color="blue_default"
@@ -30,6 +36,8 @@
           size="x-small"
           variant="flat"
           class="ml-1"
+          title="Editar"
+          @click="openModal('edit',id)"
         ></v-btn>
         <v-btn
           color="blue_default"
@@ -37,10 +45,31 @@
           size="x-small"
           variant="flat"
           class="ml-1"
+          title="Ver videos"
+          @click="openModal('video',id)"
         ></v-btn>
       </div>
   </template>
   </Table>
+  <!-- modal -->
+  <v-dialog
+      v-model="dialog"
+      min-width="500"
+      max-width="1000"
+      width="650"
+    >
+      <v-card>
+        <v-card-title>
+          <span class="text-h5">{{dialogData.title}}</span>
+        </v-card-title>
+        <v-card-text>
+          {{dialogData.data}}
+        </v-card-text>
+        <v-card-actions class="d-flex justify-end">
+          <v-btn color="red_default" @click="dialog = false">Cerrar</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -60,23 +89,27 @@ export default defineComponent({
   },
   setup(props) {
     const headersFilters = ref({})
+    const dialog = ref(false)
+    const dialogData = ref({
+      type: null
+    })
     const headers = ref([
       {
         text: 'Id',
         sortable: false,
         value: 'id',
-        visible: true,
+        visibleFilter: true,
         activeFilter: true
       },
-      { text: 'Guild', value: 'guild', sortable: false, visible: true, activeFilter: true },
-      { text: 'Usuario', value: 'user', sortable: false, visible: true, activeFilter: true },
-      { text: 'Negocio', value: 'business', sortable: false, visible: true, activeFilter: true },
-      { text: 'Canal', value: 'canal', sortable: false, visible: true, activeFilter: true},
-      { text: 'Creado el', value: 'createof', sortable: false, visible: true, activeFilter: true },
-      { text: 'Ultimos evento', value: 'lastEvent', sortable: false, visible: true, activeFilter: true },
-      { text: 'Código respuesta', value: 'codeResponse', sortable: false, visible: true, activeFilter: false},
-      { text: 'Descripción respuesta', value: 'descriptionResponse', sortable: false, visible: true, activeFilter: false },
-      { text: 'Acciónes', value: 'actions', sortable: false, visible: false,activeFilter: false },
+      { text: 'Guild', value: 'guild', sortable: false, visibleFilter: true, activeFilter: true },
+      { text: 'Usuario', value: 'user', sortable: false, visibleFilter: true, activeFilter: true },
+      { text: 'Negocio', value: 'business', sortable: false, visibleFilter: true, activeFilter: true },
+      { text: 'Canal', value: 'canal', sortable: false, visibleFilter: true, activeFilter: true},
+      { text: 'Creado el', value: 'createof', sortable: false, visibleFilter: true, activeFilter: true },
+      { text: 'Ultimos evento', value: 'lastEvent', sortable: false, visibleFilter: true, activeFilter: true },
+      { text: 'Código respuesta', value: 'codeResponse', sortable: false, visibleFilter: true, activeFilter: false},
+      { text: 'Descripción respuesta', value: 'descriptionResponse', sortable: false, visibleFilter: true, activeFilter: false },
+      { text: 'Acciónes', value: 'actions', sortable: false, visibleFilter: false,activeFilter: false },
     ])
 
     const list = ref([
@@ -114,7 +147,16 @@ export default defineComponent({
       headers,
       headersFilters,
       list,
-      search
+      search,
+      dialog,
+      dialogData,
+      openModal: (type, data) => {
+        dialog.value = true
+        const dataforDialog = dialogData.value
+        dataforDialog.title = type
+        dataforDialog.type = type
+        dataforDialog.data = data
+      }
     }
   }
 });

@@ -73,7 +73,24 @@ export default {
           icon: 'mdi-view-dashboard',
           value: 'Touch Id',
           group: 'reports'
-        }
+        },
+        {
+          type: 'divider',
+        },
+        {
+          type: 'title-group',
+          name: 'Case Management',
+          group: ' CaseManagement',
+        },
+        {
+          type: 'item',
+          name: 'Onboarding Doc. de Identidad',
+          to: '/dashboard/onboardingIdentidad',
+          toDynamic:{name: 'dashboard-OnboardingIdentidad'},
+          icon: 'mdi-view-dashboard',
+          value: 'Onboarding Doc. de Identidad',
+          group: 'CaseManagement'
+        },
       ]
     }
   },

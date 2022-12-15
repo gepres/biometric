@@ -1,5 +1,5 @@
 <template>
-  <header-page class="mb-3" title="Touch Id" caption="Reporte" />
+  <header-page class="mb-3" title="Onboarding Doc. de Identidad" caption="Manejo de casos" />
   <Table :headers="headers" :headersFilters="headersFilters" :items="list" @search="search" />
 </template>
 
@@ -8,7 +8,7 @@ import { defineComponent, ref } from 'vue';
 import HeaderPage from '@/modules/dashboard/components/shared/HeaderPage/HeaderPage.vue';
 import Table from '@/modules/shared/components/Table/Table.vue';
 export default defineComponent({
- name: 'TouchId',
+ name: 'OnboardingIdentidad',
  components: {
    HeaderPage,
    Table,

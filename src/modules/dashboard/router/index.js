@@ -43,6 +43,14 @@ export default {
       }
     },
     {
+      path: 'onboardingIdentidad',
+      name: 'dashboard-OnboardingIdentidad',
+      component: () => import(/* webpackChunkName: "dashboard-OnboardingIdentidad" */ '@/modules/dashboard/views/caseManagement/OnboardingIdentidad.vue'),
+      meta:{
+        nameRoute: 'OnboardingIdentidad'
+      }
+    },
+    {
       path: '/',
       redirect: {name: 'dashboard-home'}
     },
