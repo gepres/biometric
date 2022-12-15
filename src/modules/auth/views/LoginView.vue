@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-row class="justify-center">
+  <v-container class="pageContainer">
+    <v-row class="pageContainer_row justify-center align-center">
       <v-col xs="12" sm="12" md="4" lg="4">
         <v-form
           ref="form"
@@ -8,27 +8,37 @@
           lazy-validation
            class="d-flex justify-center align-center flex-column"
         >
+        <div class="d-flex flex-column align-start justify-start w-100">
+          <label for="username">Usuario</label>
           <v-text-field
-            outlined
+            id="username"
             v-model="user.email"
             :rules="nameRules"
-            label="Nombre"
-            variant="outlined"
             class="w-100"
             required
+            placeholder="Escribe aquí"
+            solo
+            dense
+            single-line
           ></v-text-field>
+        </div>
 
+        <div class="d-flex flex-column align-start justify-start w-100">
+          <label for="username">Contraseña</label>
           <v-text-field
             v-model="user.password"
             :rules="PasswordRules"
-            label="Contraseña"
             type="password"
-            variant="outlined"
             class="w-100"
             required
+            placeholder="Escribe aquí"
+            solo
+            dense
+            single-line
           ></v-text-field>
+        </div>
           <v-btn
-            color="success"
+            color="blue_default"
             @click="validate"
             width="200"
           >
@@ -79,13 +89,18 @@
         }
         const {ok, message} = await this.signInUser(datos)
         if(!ok) alert(message)
-        // else this.$router.push({name: 'cliente-ventas'})
+        else this.$router.push({name: 'dashboard-home'})
         this.loadingLogin = false
         }
     },
   }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.pageContainer{
+  height: 100vh;
+  &_row{
+    height: 100vh;
+  }
+}
 </style>

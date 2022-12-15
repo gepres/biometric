@@ -2,7 +2,11 @@ import authApi from "@/api/authApi";
 
 export const signInUser = async({commit}, user) => {
   try {
-    const {data} = await authApi.post('/token/', user)
+    // const {data} = await authApi.post('/token/', user)
+    const data = {
+      access: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c',
+      refresh: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
+    }
     const {access, refresh}  = data
     delete user.password
     commit('loginUser', {user, access, refresh})
