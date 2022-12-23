@@ -20,9 +20,10 @@
                 </td>
             </tr>
             <tr v-for="(item, i) of items" :key="i">
-                <td v-for="(val ,key, index) in item" :key="index">
-                    <slot :name="'body-'+ key" v-bind="item">
-                        <p class="mx-0 my-0 pl-1">{{val}}</p>
+                <td v-for="header in headers" :key="header.value">
+                    <slot :name="'body-'+ header.value" v-bind="item" :item="item" >
+                        <p v-if="!!item[header.value]" class="mx-0 my-0 pl-1">{{item[header.value]}}</p>
+                        <p v-else class="text-center">-</p>
                     </slot>
                 </td>
             </tr>

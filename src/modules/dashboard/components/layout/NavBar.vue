@@ -16,7 +16,7 @@
       <div  v-for="item of list" :key="item.value">
         <v-divider v-if="item.type === 'Divider'"></v-divider>
         <v-list-subheader v-if="item.type === 'title-group'" class="ml-3">{{item.name}}</v-list-subheader>
-        <v-list-item v-if="item.type === 'item'" class="py-0" :prepend-icon="item.icon" :to="item.toDynamic" :title="item.name" />
+        <v-list-item v-if="item.type === 'item'" color="blue_default" class="py-5" :prepend-icon="item.icon" :to="item.toDynamic" :title="item.name" />
       </div>
     </v-list>
   </v-navigation-drawer>

@@ -1,0 +1,140 @@
+{
+  "code": 700,
+  "message": "Resultado datatables ok",
+  "iTotalRecords": 330,
+  "iTotalDisplayRecords": 330,
+  "sEcho": null,
+  "sColumns": null,
+  "aaData": [
+    {
+      "operationId": 2378,
+      "operationGuid": "b8bbb187-bfc0-457d-9ee7-b4d4eea01c10",
+      "businessId": 1,
+      "userName": "alexandra1",
+      "selfiePicture": {
+        "operationImageId": 2377,
+        "imageDecrypted":"",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4361,
+        "imageDecrypted": "[IMAGE]",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0.63686,
+      "scoreDocument": 0.875,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": true,
+      "mrzDetected": true
+    },
+    {
+      "operationId": 2302,
+      "operationGuid": "9f93f24e-1683-4777-9816-dff222e5b37a",
+      "businessId": 1,
+      "userName": "estiben.giraldo@tismart.com&amp;&amp;01bbcf48-bd22-4a63-8cc3-bc330a70862e",
+      "selfiePicture": {
+        "operationImageId": 2345,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4276,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0.40858,
+      "scoreDocument": 0.8735,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": true,
+      "mrzDetected": true
+    },
+    {
+      "operationId": 2301,
+      "operationGuid": "170186ac-cdcc-4721-90a8-4fe2d5fe18a5",
+      "businessId": 1,
+      "userName": "gonzalo15_115@hotmail.com&amp;&amp;5c332a48-ade0-4dcf-849d-f162f81cc329",
+      "selfiePicture": {
+        "operationImageId": 2341,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4273,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0.47422,
+      "scoreDocument": 0.85,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": true,
+      "mrzDetected": true
+    },
+    {
+      "operationId": 2300,
+      "operationGuid": "5f7957a6-0e79-4ae0-95c9-56cedc6987aa",
+      "businessId": 1,
+      "userName": "gonzalo15_115@hotmail.com&amp;&amp;5c332a48-ade0-4dcf-849d-f162f81cc329",
+      "selfiePicture": {
+        "operationImageId": 2337,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4270,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0.36767,
+      "scoreDocument": 0.775,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": true,
+      "mrzDetected": true
+    },
+    {
+      "operationId": 2299,
+      "operationGuid": "80d5ba7c-1fad-4356-af92-125720962fe4",
+      "businessId": 1,
+      "userName": "gonzalo15_115@hotmail.com&amp;&amp;5c332a48-ade0-4dcf-849d-f162f81cc329",
+      "selfiePicture": {
+        "operationImageId": 2333,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4267,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0,
+      "scoreDocument": 0,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": true,
+      "mrzDetected": true
+    }
+  ]
+}

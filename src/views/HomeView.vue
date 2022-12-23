@@ -1,18 +1,12 @@
 <template>
-  <HelloWorld />
+  <div class="text-center">
+    <router-link to="/dashboard" class="text-h3">dashboard</router-link>
+  </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
-
-// Components
-import HelloWorld from '../components/HelloWorld.vue';
-
 export default defineComponent({
   name: 'HomeView',
-
-  components: {
-    HelloWorld,
-  },
 });
 </script>
