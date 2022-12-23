@@ -8,12 +8,29 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn variant="text" color="blue_default" icon="mdi-logout"></v-btn>
+    <v-btn variant="text" color="blue_default" icon="mdi-logout" @click="onLogout"></v-btn>
   </v-app-bar>
   <v-divider></v-divider>
 </template>
 
 <script>
+import { defineComponent } from 'vue';
+import useAuth from '@/modules/auth/composables/useAuth'
+import { useRouter } from 'vue-router'
+export default defineComponent({
+  name: 'Appbar',
+  setup() {
+    const router = useRouter()
+    const { logout } = useAuth()
+
+    return {
+      onLogout: () => {
+        router.push({name: 'login'})
+        logout()
+      }
+    }
+  }
+});
 </script>
 
 <style>
