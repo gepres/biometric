@@ -135,6 +135,188 @@
       "scoreConfigured": 0.6,
       "barcodeDetected": true,
       "mrzDetected": true
+    },
+    {
+      "operationId": 2298,
+      "operationGuid": "7401ddea-bc57-45dd-a4a2-c2ad3bc59301",
+      "businessId": 1,
+      "userName": "gonzalo15_115@hotmail.com&amp;&amp;5c332a48-ade0-4dcf-849d-f162f81cc329",
+      "selfiePicture": {
+        "operationImageId": 2329,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4264,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0.44757,
+      "scoreDocument": 0.25,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": true,
+      "mrzDetected": true
+    },
+    {
+      "operationId": 2294,
+      "operationGuid": "4efdeb59-4ac4-427f-90e4-dc0c29868170",
+      "businessId": 1,
+      "userName": "duardomart@gmail.com&amp;&amp;c796bc9b-03e8-4c09-86e8-45813b02a8f1",
+      "selfiePicture": {
+        "operationImageId": 2321,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4258,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0,
+      "scoreDocument": 0,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": true,
+      "mrzDetected": true
+    },
+    {
+      "operationId": 2293,
+      "operationGuid": "57423dec-1c69-4a12-9317-e484e1a482a6",
+      "businessId": 1,
+      "userName": "alexapazamendoza@gmail.com&amp;&amp;8b23271b-cb48-4643-a446-b106ef15ffd9",
+      "selfiePicture": {
+        "operationImageId": 2317,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4255,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0.55361,
+      "scoreDocument": 0.875,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": true,
+      "mrzDetected": true
+    },
+    {
+      "operationId": 2291,
+      "operationGuid": "8c93f88b-bec0-49ff-a7f4-fe2d9702b0b0",
+      "businessId": 1,
+      "userName": "edwin.astohuaman@tismart.com&amp;&amp;5c5ea8ca-79bf-4a2e-98f5-ce655b50a31d",
+      "selfiePicture": {
+        "operationImageId": 2313,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4250,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0.56122,
+      "scoreDocument": 0.9,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": false,
+      "mrzDetected": true
+    },
+    {
+      "operationId": 2288,
+      "operationGuid": "0ebe4611-077b-4527-9430-b6a42025b49d",
+      "businessId": 1,
+      "userName": "vmadalangoitiavalverde@gmail.com&amp;&amp;935072e2-6051-45cf-b5ae-ba348c160eb1",
+      "selfiePicture": {
+        "operationImageId": 2309,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4244,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0.35173,
+      "scoreDocument": 0.95,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": true,
+      "mrzDetected": true
+    },
+    {
+      "operationId": 2282,
+      "operationGuid": "704551a1-1640-4de6-92df-ff353328ce68",
+      "businessId": 1,
+      "userName": "edwin.astohuaman@tismart.com&amp;&amp;e86ff67d-5d6c-4ffe-a022-4311942a570d",
+      "selfiePicture": {
+        "operationImageId": 2301,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4235,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0.44367,
+      "scoreDocument": 0.9,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": false,
+      "mrzDetected": true
+    },
+    {
+      "operationId": 2279,
+      "operationGuid": "b83f9f48-8cf4-4dd8-913d-d1309d453b01",
+      "businessId": 1,
+      "userName": "silvia.ccami@tismart.com&amp;&amp;bdfbb91e-f330-4a65-9472-399d7de6190a",
+      "selfiePicture": {
+        "operationImageId": 2305,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Selfie Neutral",
+        "imageTypeShortDescription": "SN"
+      },
+      "frontDocumentPicture": {
+        "operationImageId": 4227,
+        "imageDecrypted": "",
+        "imageTypeId": 1,
+        "imageTypeDescription": "Document Front",
+        "imageTypeShortDescription": "DF"
+      },
+      "scoreSelfie": 0.72639,
+      "scoreDocument": 0.8833333,
+      "scoreGovernment": 0,
+      "scoreConfigured": 0.6,
+      "barcodeDetected": true,
+      "mrzDetected": true
     }
   ]
 }

@@ -5,19 +5,27 @@
       <span>{{ operationId }}</span>
     </template>
     <template v-slot:body-selfie="item">
-      <v-img
-        :src="item.selfie"
-        :lazy-src="item.selfie"
-        aspect-ratio="1"
-        cover
-        width="100"
-        class="bg-grey-lighten-2 rounded-circle d-inline-block"
-        @click="openDialogPhoto(item.selfie, item.selfiePicture)"
-        aria-controls
-      ></v-img>
+      <v-hover v-slot="{ isHovering, props }">
+        <v-card  :class="{ 'on-hover': isHovering }" v-bind="props" elevation="0" color="transparent" class="text-center">
+          <v-img
+          :src="item.selfie"
+          :lazy-src="item.selfie"
+          aspect-ratio="1"
+          cover
+          width="100"
+          class="bg-grey-lighten-2 rounded-circle d-inline-block"
+          @click="openDialogPhoto(item.selfie, item.selfiePicture)"
+          aria-controls
+          />
+        </v-card>
+      </v-hover>
     </template>
   <template v-slot:body-frontDoc="item">
+    <v-hover v-slot="{ isHovering, props }">
+      <v-card  :class="{ 'on-hover': isHovering }" v-bind="props" elevation="0" color="transparent" class="text-center">
     <v-img
+        :class="{ 'on-hover': isHovering }"
+        v-bind="props"
         :src="item.frontDoc"
         :lazy-src="item.frontDoc"
         aspect-ratio="2"
@@ -26,7 +34,9 @@
         class="bg-grey-lighten-2 rounded-lg d-inline-block"
         @click="openDialogPhoto(item.frontDoc, item.frontDocumentPicture)"
         aria-controls
-      ></v-img>
+      />
+    </v-card>
+    </v-hover>
   </template>
   <template v-slot:body-scoreSelfie="{ scoreSelfie }">
     <span>{{  parseFloat(Number(scoreSelfie) * 100).toFixed(2) }}%</span>
@@ -203,3 +213,12 @@ export default defineComponent({
    }
 });
 </script>
+<style lang="scss" scoped>
+  .v-card {
+    transition: opacity 0.6 ease-in-out;
+  }
+
+  .v-card.on-hover {
+    opacity: .6;
+  }
+</style>
